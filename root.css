@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* ==========================
+   Reset & Global Setup
+========================== */
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==========================
+   Global Variables
+========================== */
+:root {
+  --color-dark: #154b55; /* -- Text, headings, menus */
+  --color-primary: #154b55; /* Primary button background */
+  --color-primary-text: #ffffff; /* Primary button text */
+  --color-accent: #17b67e; /* Span heading */
+  --color-line: #154b55; /* Heading bottom line */
+
+  --font-family-base: "Montserrat", sans-serif;
+  --transition-base: all 0.2s ease;
+  --border-radius: 6px;
+  --btn-shadow: rgba(0, 0, 0, 0.41) 6px 5px 14px -6px;
+}
+
+/* ==========================
+   Base
+========================== */
+body {
+  color: var(--color-dark);
+  font-family: var(--font-family-base);
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 0;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-user-select: none;
+  user-select: none; 
+}
+
+/* Links */
+a {
+  color: var(--color-dark);
+  text-decoration: none;
+  outline: none;
+  transition: var(--transition-base);
+}
+
+/* a:hover {
+  color: var(--color-accent);
+} 
+
+a:active {
+  color: var(--color-line);
+}
+
+/* ==========================
+   Containers
+========================== */
+.primary-container {
+  max-width: 1320px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.secondary-container {
+  max-width: 1025px;
+  margin: auto;
+}
+
+/* ==========================
+   Headings
+========================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-dark);
+  line-height: 1.32;
+  margin-top: 0;
+  /* margin-bottom: 0.75em; */
+  font-weight: 700;
+}
+
+/* Desktop Defaults */
+h1 { font-size: 3.2rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.3rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.85rem; }
+
+/* Responsive Typography */
+@media (max-width: 1199.98px) {
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2.2rem; }
+  h3 { font-size: 1.6rem; }
+}
+
+@media (max-width: 991.98px) {
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.15rem; }
+}
+
+@media (max-width: 767.98px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.7rem; }
+  h3 { font-size: 1.3rem; }
+  h4 { font-size: 1.1rem; }
+  h5 { font-size: 0.95rem; }
+}
+
+@media (max-width: 575.98px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.2rem; }
+  h4 { font-size: 1rem; }
+  h5 { font-size: 0.9rem; }
+  h6 { font-size: 0.8rem; }
+}
+
+/* Highlighted Elements */
+.span-heading {
+  color: var(--color-accent);
+}
+
+.heading-btm-line {
+  display: inline-block;
+  border-bottom: 2px solid var(--color-line);
+  padding-bottom: 1.5px;
+}
+
+/* ==========================
+   Buttons
+========================== */
+.btn-primary,
+.btn-secondary {
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--btn-shadow);
+  transition: var(--transition-base);
+  cursor: none;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-primary-text);
+  border: 1.5px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-text);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+}
+
+.italic-heading-universal{
+    font-style: italic;
+    letter-spacing: -3px;
+    font-weight: 500;
+}
+
+/* ==========================
+   Shine Hover Effect
+========================== */
+.shine {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  display: inline-flex;
+  overflow: hidden !important;
+}
+
+.shine:hover {
+  transform: scale(1.04);
+}
+
+.shine:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.shine::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.75;
+}
+
+@keyframes shine {
+  0% { left: -100px; }
+  60% { left: 100%; }
+  to { left: 100%; }
+}
+
+/* fancy button  (use class = "button") to tun this*/
+/* From Uiverse.io by zjssun */ 
+.button {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: none;
+  background-color: #154B55;
+  transition: all ease-in-out 0.3s;
+}
+
+
+.button:hover{
+  background: white;
+  color: #154B55;
+  border: 1px solid #154B55;
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #154B55 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #154B55 20%, transparent 30%),
+    radial-gradient(circle, #154B55 20%, transparent 20%),
+    radial-gradient(circle, #154B55 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #154B55 15%, transparent 20%),
+    radial-gradient(circle, #154B55 20%, transparent 20%),
+    radial-gradient(circle, #154B55 20%, transparent 20%),
+    radial-gradient(circle, #154B55 20%, transparent 20%),
+    radial-gradient(circle, #154B55 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #154B55 20%, transparent 20%),
+    radial-gradient(circle, #154B55 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #154B55 15%, transparent 20%),
+    radial-gradient(circle, #154B55 20%, transparent 20%),
+    radial-gradient(circle, #154B55 20%, transparent 20%),
+    radial-gradient(circle, #154B55 20%, transparent 20%),
+    radial-gradient(circle, #154B55 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+button a{
+  color: inherit;
+}
