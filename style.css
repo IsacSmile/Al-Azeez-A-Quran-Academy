@@ -366,7 +366,7 @@
 
 .parent-about {
   padding: 7rem 0;
-  background-image: url("/images/araic-caligraphy-bg.png");
+  background-image: url("./images/araic-caligraphy-bg.png");
 }
 
 .about-span {
@@ -426,7 +426,7 @@
 .tutor-img-1,
 .tutor-img-2,
 .tutor-img-3 {
-  background-image: url("/images/Azizur\ Rahman.png");
+  background-image: url("./images/Azizur\ Rahman.png");
   height: 310px;
   background-repeat: no-repeat;
   background-position: center;
@@ -436,11 +436,11 @@
 }
 
 .tutor-img-2 {
-  background-image: url("/images/Ayesha\ Tauseef.png");
+  background-image: url("./images/Ayesha\ Tauseef.png");
 }
 
 .tutor-img-3 {
-  background-image: url("/images/Resma\ Khatun.png");
+  background-image: url("./images/Resma\ Khatun.png");
 }
 
 /* Courses we offer  */
