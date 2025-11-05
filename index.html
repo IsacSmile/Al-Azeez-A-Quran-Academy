@@ -177,7 +177,7 @@
           </p>
           <div class="parent-button-container">
             <a href="#courses-section"><button class="btn btn-secondary shine">Explore Courses</button></a>
-            <a href=""><button class="btn btn-primary">Start 3 Days Free Trial</button></a>
+            <a href="https://forms.gle/ToWeJ2hgdBHM8KdVA" target="_blank"><button class="btn btn-primary">Start 3 Days Free Trial</button></a>
           </div>
         </div>
       </div>
@@ -193,8 +193,8 @@
     </h1>
 
     <meta itemprop="alternateName" content="Al-Azeez Qur'an Academy Online Quran Classes">
-    <meta itemprop="url" content="https://alazeezquranacademy.in/">
-    <meta itemprop="logo" content="https://alazeezquranacademy.in/images/logo.png">
+    <meta itemprop="url" content="https://alazeezquranacademy.com/">
+    <meta itemprop="logo" content="https://alazeezquranacademy.com/images/alazeez-logo.jpeg">
     <meta itemprop="sameAs" content="https://www.instagram.com/alazeezquranacademy/">
 
     <p class="about-para" itemprop="description">
@@ -272,7 +272,7 @@
                         <h4 class="level course-level"><strong>Level :</strong> <br> <span class="spn-course-level">Advance</span></h4> 
                         <h4 class="level course-duration"><strong>Duration :</strong> <br> <span class="spn-course-level">3 Months</span></h4>
                         <h4 class="level course-duration"><strong>Fee :</strong> <br> <span class="spn-course-level">₹ 2,800</span></h4>
-                        <button class="button course-btn"><a href="">Register</a></button>
+                        <button class="button course-btn"><a href="https://forms.gle/ToWeJ2hgdBHM8KdVA" target="_blank">Register</a></button>
                     </div>
                 </div>
             </div>
@@ -295,7 +295,7 @@
                         <h4 class="level course-level"><strong>Level :</strong> <br> <span class="spn-course-level">Advance</span></h4> 
                         <h4 class="level course-duration"><strong>Duration :</strong> <br> <span class="spn-course-level">3 Months</span></h4>
                         <h4 class="level course-duration"><strong>Fee :</strong> <br> <span class="spn-course-level">₹ 3,000</span></h4>
-                        <button class="button course-btn"><a href="">Register</a></button>
+                        <button class="button course-btn"><a href="https://forms.gle/ToWeJ2hgdBHM8KdVA" target="_blank">Register</a></button>
                     </div>
                 </div>
             </div>
@@ -317,7 +317,7 @@
                         <h4 class="level course-level"><strong>Level :</strong> <br> <span class="spn-course-level">Advance</span></h4> 
                         <h4 class="level course-duration"><strong>Duration :</strong> <br> <span class="spn-course-level">3 Months</span></h4>
                         <h4 class="level course-duration"><strong>Fee :</strong> <br> <span class="spn-course-level">₹ 3,300</span></h4>
-                        <button class="button course-btn"><a href="">Register</a></button>
+                        <button class="button course-btn"><a href="https://forms.gle/ToWeJ2hgdBHM8KdVA" target="_blank">Register</a></button>
                     </div>
                 </div>
             </div>
@@ -625,90 +625,10 @@
       </div>
     </div>
 
- <!-- Add this anywhere near the end of your HTML -->
+ <!-- Animated round cursor -->
 <div class="faq-cursor"></div>
 
-<!-- ✅ CSS -->
-<style>
-  /* Hide default cursor */
-  * {
-    cursor: none;
-  }
 
-  .faq-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 25px;
-    height: 25px;
-    border: 2px solid #154B55;
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: width 0.1s ease, height 0.1s ease, background 0.1s ease, transform 0.1s ease;
-    z-index: 9999;
-    mix-blend-mode: difference;
-  }
-
-  /* expand on click */
-  .faq-cursor.click {
-    width: 40px;
-    height: 40px;
-    background: rgba(0, 184, 148, 0.15);
-    transition: width 0.1s ease, height 0.1s ease, background 0.1s ease;
-  }
-
-  /* change color/size when hovering on clickable elements */
-  a:hover ~ .faq-cursor,
-  button:hover ~ .faq-cursor,
-  .faq-question:hover ~ .faq-cursor {
-    background: #154B55;
-    width: 35px;
-    height: 35px;
-  }
-
-  @media (max-width: 768px) {
-    /* Disable on mobile for usability */
-    .faq-cursor {
-      display: none;
-    }
-    * {
-      cursor: auto;
-    }
-  }
-</style>
-
-<!-- ✅ JavaScript -->
-<script>
-  const cursor = document.querySelector(".faq-cursor");
-
-  let mouseX = 0, mouseY = 0;
-  let currentX = 0, currentY = 0;
-
-  // Smooth trailing effect
-  const followSpeed = 0.15;
-  function animate() {
-    currentX += (mouseX - currentX) * followSpeed;
-    currentY += (mouseY - currentY) * followSpeed;
-    cursor.style.transform = `translate(${currentX - 10}px, ${currentY - 10}px)`;
-    requestAnimationFrame(animate);
-  }
-  animate();
-
-  // Update target position
-  document.addEventListener("mousemove", (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-
-  // Click animation
-  document.addEventListener("mousedown", () => {
-    cursor.classList.add("click");
-  });
-  document.addEventListener("mouseup", () => {
-    cursor.classList.remove("click");
-  });
-</script>
 
  <!-- Footer Section  -->
 

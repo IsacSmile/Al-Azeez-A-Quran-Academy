@@ -38,3 +38,34 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+
+// Animated cursor
+ const cursor = document.querySelector(".faq-cursor");
+
+  let mouseX = 0, mouseY = 0;
+  let currentX = 0, currentY = 0;
+
+  // Smooth trailing effect
+  const followSpeed = 0.15;
+  function animate() {
+    currentX += (mouseX - currentX) * followSpeed;
+    currentY += (mouseY - currentY) * followSpeed;
+    cursor.style.transform = `translate(${currentX - 10}px, ${currentY - 10}px)`;
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+  // Update target position
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  // Click animation
+  document.addEventListener("mousedown", () => {
+    cursor.classList.add("click");
+  });
+  document.addEventListener("mouseup", () => {
+    cursor.classList.remove("click");
+  });

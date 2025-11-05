@@ -10,6 +10,7 @@
   box-sizing: border-box;
   outline: 0;
   text-decoration: none;
+  cursor: none;
 }
 
 html {
@@ -332,4 +333,73 @@ h6 { font-size: 0.85rem; }
 
 button a{
   color: inherit;
+}
+
+
+/* For The Animated Cursor  */
+
+  .faq-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #154B55;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.1s ease, height 0.1s ease, background 0.1s ease, transform 0.1s ease;
+    z-index: 9999;
+    mix-blend-mode: difference;
+  }
+
+  /* expand on click */
+  .faq-cursor.click {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 184, 148, 0.15);
+    transition: width 0.1s ease, height 0.1s ease, background 0.1s ease;
+  }
+
+  /* change color/size when hovering on clickable elements */
+  a:hover ~ .faq-cursor,
+  button:hover ~ .faq-cursor,
+  .faq-question:hover ~ .faq-cursor {
+    background: #154B55;
+    width: 35px;
+    height: 35px;
+  }
+
+  @media (max-width: 768px) {
+    /* Disable on mobile for usability */
+    .faq-cursor {
+      display: none;
+    }
+    * {
+      cursor: auto;
+    }
+  }
+
+
+  /* For The Scollbar  */
+::-webkit-scrollbar {
+  width: 6px;             
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;     
+}
+::-webkit-scrollbar-thumb {
+  background-color: #154B55; 
+  border-radius: 10px;     
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0f3b43; 
+}
+
+/* ===== Firefox (and other non-WebKit browsers) ===== */
+* {
+  scrollbar-width: thin;             
+  scrollbar-color: #154B55 #f0f0f0;  
 }
